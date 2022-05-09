@@ -17,7 +17,7 @@ function drawAvatar(seed, pixelsize, pixelcount) {
     canvas.width = canvassize;
     canvas.height = canvassize;
 
-    for (let f = 0; f < pixelcount-1; f++) {
+    for (let f = 0; f < pixelcount; f++) {
         for (let i = 0; i < pixelcount/2+1; i++) {
             ctx.fillStyle = '#fff';
             if (getRandomInt(2, myrng) == 1) {
