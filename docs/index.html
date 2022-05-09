@@ -15,15 +15,20 @@
 <body>
 <div id="centered" class="container grid">
     <div class="row">
-        <input type="text" size="20" id="pixelsize" class="col-6 form-control " placeholder="one pixel size" value="40">
-        <input type="text" size="20" id="pixels" class="col-6 form-control " placeholder="pixel count" value="12">
+        <div class="col-6 input-group">
+            <input type="number" size="20" id="pixelsize" class="form-control " placeholder="one pixel size" value="40" onchange="onButtonClick()">
+            <span class="input-group-text">px</span>
+        </div>
+        <div class="col-6 input-group">
+            <input type="number" size="20" id="pixels" class="form-control " placeholder="pixel count" value="12" onchange="onButtonClick()">
+            <span class="input-group-text">pcs</span>
+        </div>
     </div>
     <div class="row">
-        <input type="text" size="40" id="input" class="form-control col-9" placeholder="word">
-        <button onclick="onButtonClick()" class="btn btn-success col-3">generate</button>
+        <input type="text" size="40" id="input" class="form-control col-12" placeholder="word" onchange="onButtonClick()">
     </div>
     <div class="row">
-        <canvas height="480" width="480" id="canvas" class="col-12" ></canvas>
+        <canvas height="480" width="480" id="canvas" class="col-12"></canvas>
     </div>
 
 </div>
