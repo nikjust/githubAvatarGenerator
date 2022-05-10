@@ -10,6 +10,9 @@
 .col-6 {
     width: 50% !important;
 }
+.col-3 {
+    width: 25% !important;
+}
 .col-9 {
     width: 75% !important;
 }
