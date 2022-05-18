@@ -26,7 +26,7 @@ function drawSquareTriangle(ctx, x, y, size, color) {
     ctx.fill();
 }
 
-function drawCircle(ctx, x, y, size, color) {
+function drawAmorphCircle(ctx, x, y, size, color) {
     size = Number(size);
     ctx.beginPath();
     ctx.fillStyle = color
@@ -47,6 +47,17 @@ function drawCircle(ctx, x, y, size, color) {
 
 
 
+}
+function drawCircle(ctx, x, y, size, color) {
+    size = Number(size);
+    ctx.beginPath();
+    ctx.fillStyle = color
+
+    FirstDivider = 8
+    SecondDivider = 2
+
+    ctx.arc(x + size / 2, y + size / 2, size / 2, 0, 2 * Math.PI);
+    ctx.fill();
 }
 
 function drawAvatar(seed, pixelsize, pixelcountx, pixelcounty) {
@@ -115,8 +126,8 @@ function drawAmorphAvatar(seed, pixelsize, pixelcountx, pixelcounty) {
             if (getRandomInt(2, myrng) === 1) {
                 ctx.fillStyle = '#' + randomColor;
             }
-            drawCircle(ctx, i * pixelsize - pixelsize, f * pixelsize, pixelsize * 1.5, ctx.fillStyle);
-            drawCircle(ctx, canvassizex - i * pixelsize, f * pixelsize, pixelsize * 1.5, ctx.fillStyle);
+            drawAmorphCircle(ctx, i * pixelsize - pixelsize, f * pixelsize, pixelsize*1.2, ctx.fillStyle);
+            drawAmorphCircle(ctx, canvassizex - i * pixelsize, f * pixelsize, pixelsize*1.2, ctx.fillStyle);
 
         }
     }
